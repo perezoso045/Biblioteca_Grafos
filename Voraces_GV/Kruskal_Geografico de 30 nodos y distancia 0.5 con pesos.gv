@@ -1,0 +1,31 @@
+digraph Voraces_GV/Kruskal_Geografico de 30 nodos y distancia 0.5 con pesos {
+4 - 27 [label = 1];
+12 - 29 [label = 1];
+16 - 18 [label = 1];
+17 - 24 [label = 1];
+10 - 13 [label = 2];
+25 - 28 [label = 2];
+6 - 7 [label = 2];
+18 - 22 [label = 3];
+4 - 17 [label = 4];
+7 - 20 [label = 4];
+8 - 24 [label = 4];
+0 - 2 [label = 4];
+17 - 28 [label = 4];
+2 - 23 [label = 4];
+0 - 14 [label = 5];
+10 - 18 [label = 5];
+7 - 18 [label = 5];
+14 - 28 [label = 5];
+15 - 19 [label = 5];
+11 - 28 [label = 8];
+8 - 15 [label = 8];
+1 - 10 [label = 8];
+5 - 25 [label = 8];
+2 - 21 [label = 8];
+11 - 20 [label = 9];
+9 - 26 [label = 10];
+9 - 15 [label = 10];
+3 - 6 [label = 14];
+7 - 12 [label = 15];
+}

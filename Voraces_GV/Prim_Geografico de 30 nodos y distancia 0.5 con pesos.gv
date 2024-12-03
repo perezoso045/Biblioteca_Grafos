@@ -1,0 +1,31 @@
+digraph Voraces_GV/Prim_Geografico de 30 nodos y distancia 0.5 con pesos {
+0 - 18 [label = 9];
+1 - 10 [label = 8];
+0 - 2 [label = 4];
+3 - 6 [label = 14];
+4 - 17 [label = 4];
+5 - 25 [label = 8];
+6 - 7 [label = 2];
+7 - 20 [label = 4];
+8 - 24 [label = 4];
+9 - 15 [label = 10];
+10 - 18 [label = 5];
+11 - 28 [label = 8];
+7 - 12 [label = 15];
+10 - 13 [label = 2];
+0 - 14 [label = 5];
+8 - 15 [label = 8];
+16 - 18 [label = 1];
+17 - 28 [label = 4];
+7 - 18 [label = 5];
+15 - 19 [label = 5];
+2 - 21 [label = 8];
+18 - 22 [label = 3];
+2 - 23 [label = 4];
+17 - 24 [label = 1];
+25 - 28 [label = 2];
+24 - 26 [label = 10];
+4 - 27 [label = 1];
+14 - 28 [label = 5];
+12 - 29 [label = 1];
+}

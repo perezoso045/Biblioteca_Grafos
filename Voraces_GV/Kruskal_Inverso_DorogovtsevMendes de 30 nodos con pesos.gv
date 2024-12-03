@@ -1,0 +1,31 @@
+digraph Voraces_GV/Kruskal_Inverso_DorogovtsevMendes de 30 nodos con pesos {
+25 - 6 [label = 41];
+23 - 14 [label = 36];
+19 - 11 [label = 33];
+11 - 0 [label = 25];
+17 - 11 [label = 25];
+15 - 11 [label = 21];
+28 - 4 [label = 18];
+18 - 17 [label = 17];
+6 - 4 [label = 17];
+20 - 5 [label = 16];
+21 - 0 [label = 15];
+14 - 4 [label = 13];
+5 - 2 [label = 13];
+29 - 13 [label = 12];
+7 - 0 [label = 12];
+7 - 6 [label = 12];
+12 - 2 [label = 10];
+22 - 1 [label = 10];
+26 - 17 [label = 9];
+4 - 1 [label = 7];
+10 - 0 [label = 4];
+15 - 3 [label = 4];
+16 - 4 [label = 4];
+8 - 2 [label = 4];
+9 - 0 [label = 3];
+1 - 2 [label = 2];
+13 - 2 [label = 2];
+27 - 24 [label = 2];
+24 - 22 [label = 1];
+}
