@@ -1,0 +1,135 @@
+from Metodos import *
+from Ejemplos_parte1 import n1,n2,n3,p,r,d
+import pygame
+nodo_raiz_1=20
+nodo_raiz_2=5
+nodo_raiz_3=29
+WHITE = (255, 255, 255)  # Color blanco para el fondo
+RED = (255, 0, 0)  # Color rojo para los nodos
+BLUE = (0, 0, 255)  # Color azul para las aristas
+WIDTH, HEIGHT = 1100, 700  # Dimensiones de la ventana de pygame
+screen = pygame.display.set_mode((WIDTH, HEIGHT))  # Crear la pantalla de visualización
+clock = pygame.time.Clock()  # Inicializar el reloj de pygame
+pygame.init()
+
+# Grafo en forma de malla - 100 nodos
+#malla=Grafo('Malla de 25 por 4')  # Inicializa un grafo con el nombre correspondiente
+#malla.cargar_grafo('Archivos_GV/Malla de 25 por 4.gv') #Carga el grafo desde un archivo .gv
+#objeto=malla.Fruchterman(WHITE,RED,BLUE,screen,clock,10,0.1,1000,1,55)
+
+# Grafo en forma de malla - 100 nodos
+#malla=Grafo('Malla de 25 por 4')  # Inicializa un grafo con el nombre correspondiente
+#malla.cargar_grafo('Archivos_GV/Malla de 25 por 4.gv') #Carga el grafo desde un archivo .gv
+#objeto=malla.Barnes_hut(WHITE,RED,BLUE,screen,clock,100,0.1,2000,5,4,60)
+
+#Grafo en forma de malla - 500 nodos
+#malla=Grafo('Malla de 50 por 10')  # Inicializa un grafo con el nombre correspondiente
+#malla.cargar_grafo('Archivos_GV/Malla de 50 por 10.gv') #Carga el grafo desde un archivo .gv
+#objeto=malla.Fruchterman(WHITE,RED,BLUE,screen,clock,100,0.01,5000,20,25)
+#
+#Grafo en forma de malla - 500 nodos
+malla=Grafo('Malla de 50 por 10')  # Inicializa un grafo con el nombre correspondiente
+malla.cargar_grafo('Archivos_GV/Malla de 50 por 10.gv') #Carga el grafo desde un archivo .gv
+objeto=malla.Barnes_hut(WHITE,RED,BLUE,screen,clock,40,0.5,2000,3,15,1)
+#
+## Grafo de Erdos-Renyi - 100 nodos
+#erdosReny=Grafo('Erdos-Renyi de ' + str(n2) + ' nodos y ' + str(int(n2+(n2*1/3))) + ' aristas')  # Inicializa un grafo con el nombre correspondiente
+#erdosReny.cargar_grafo('Archivos_GV/Erdos-Renyi de '+ str(n2)+ ' nodos y ' + str(int(n2+(n2*2))) + ' aristas.gv') #Carga el grafo desde un archivo .gv
+#objeto=erdosReny.Fruchterman(WHITE,RED,BLUE,screen,clock,10,0.1,1000,100,60)
+
+## Grafo de Erdos-Renyi - 100 nodos
+#erdosReny=Grafo('Erdos-Renyi de ' + str(n2) + ' nodos y ' + str(int(n2+(n2*1/3))) + ' aristas')  # Inicializa un grafo con el nombre correspondiente
+#erdosReny.cargar_grafo('Archivos_GV/Erdos-Renyi de '+ str(n2)+ ' nodos y ' + str(int(n2+(n2*2))) + ' aristas.gv') #Carga el grafo desde un archivo .gv
+#objeto=erdosReny.Barnes_hut(WHITE,RED,BLUE,screen,clock,350,0.05,2000,2,1,80)
+#
+#Grafo de Erdos-Renyi - 500 nodos
+#erdosReny=Grafo('Erdos-Renyi de ' + str(n3) + ' nodos y ' + str(int(n3+(n3*1/3))) + ' aristas')  # Inicializa un grafo con el nombre correspondiente
+#erdosReny.cargar_grafo('Archivos_GV/Erdos-Renyi de '+ str(n3)+ ' nodos y ' + str(int(n3+(n3*1/3))) + ' aristas .gv') #Carga el grafo desde un archivo .gv
+#objeto=erdosReny.Fruchterman(WHITE,RED,BLUE,screen,clock,100,0.01,5000,20,25)
+
+## Grafo de Erdos-Renyi - 500 nodos
+#erdosReny=Grafo('Erdos-Renyi de ' + str(n3) + ' nodos y ' + str(int(n3+(n3*1/3))) + ' aristas')  # Inicializa un grafo con el nombre correspondiente
+#erdosReny.cargar_grafo('Archivos_GV/Erdos-Renyi de '+ str(n3)+ ' nodos y ' + str(int(n3+(n3*1/3))) + ' aristas .gv') #Carga el grafo desde un archivo .gv
+#objeto=erdosReny.Barnes_hut(WHITE,RED,BLUE,screen,clock,10,0.1,2000,10,15,20)
+##
+#
+# Grafo de Gilbert - 100 nodos
+#gilbert=Grafo('Gilbert de ' + str(n2) + ' nodos y probabilidad de conexion de ' + str(p))  # Inicializa un grafo con el nombre correspondiente
+#gilbert.cargar_grafo('Archivos_GV/Gilbert de '+str(n2)+' nodos y probabilidad de conexion de '+str(p)+'.gv') #Carga el grafo desde un archivo .gv
+#objeto=gilbert.Fruchterman(WHITE,RED,BLUE,screen,clock,100,0.01,1500,2,80)
+
+# Grafo de Gilbert - 100 nodos
+#gilbert=Grafo('Gilbert de ' + str(n2) + ' nodos y probabilidad de conexion de ' + str(p))  # Inicializa un grafo con el nombre correspondiente
+#gilbert.cargar_grafo('Archivos_GV/Gilbert de '+str(n2)+' nodos y probabilidad de conexion de '+str(p)+'.gv') #Carga el grafo desde un archivo .gv
+#objeto=gilbert.Barnes_hut(WHITE,RED,BLUE,screen,clock,1000,0.003,2000,3,1,60)
+#
+# Grafo de Gilbert - 500 nodos
+#gilbert=Grafo('Gilbert de ' + str(n3) + ' nodos y probabilidad de conexion de ' + str(p))  # Inicializa un grafo con el nombre correspondiente
+#gilbert.cargar_grafo('Archivos_GV/Gilbert de '+str(n3)+' nodos y probabilidad de conexion de '+str(p)+'.gv') #Carga el grafo desde un archivo .gv
+#objeto=gilbert.Fruchterman(WHITE,RED,BLUE,screen,clock,100,0.1,3000,50,20)
+
+## Grafo de Gilbert - 500 nodos
+#gilbert=Grafo('Gilbert de ' + str(n3) + ' nodos y probabilidad de conexion de ' + str(p))  # Inicializa un grafo con el nombre correspondiente
+#gilbert.cargar_grafo('Archivos_GV/Gilbert de '+str(n3)+' nodos y probabilidad de conexion de '+str(p)+'.gv') #Carga el grafo desde un archivo .gv
+#objeto=gilbert.Barnes_hut(WHITE,RED,BLUE,screen,clock,2000,0.01,2000,5,15,20)
+##
+# Grafo geográfico - 100 nodos
+#geografico=Grafo('Geografico de ' + str(n2) + ' nodos y distancia ' + str(r))  # Inicializa un grafo con el nombre correspondiente
+#geografico.cargar_grafo('Archivos_GV/Geografico de '+str(n2)+' nodos y distancia '+str(r)+'.gv') #Carga el grafo desde un archivo .gv
+#objeto=geografico.Fruchterman(WHITE,RED,BLUE,screen,clock,100,0.01,1500,2,85)
+
+# Grafo geográfico - 100 nodos
+#geografico=Grafo('Geografico de ' + str(n2) + ' nodos y distancia ' + str(r))  # Inicializa un grafo con el nombre correspondiente
+#geografico.cargar_grafo('Archivos_GV/Geografico de '+str(n2)+' nodos y distancia '+str(r)+'.gv') #Carga el grafo desde un archivo .gv
+#objeto=geografico.Barnes_hut(WHITE,RED,BLUE,screen,clock,200,0.001,2000,4,1,30)
+#
+## Grafo geográfico - 500 nodos
+#geografico=Grafo('Geografico de ' + str(n3) + ' nodos y distancia ' + str(r))  # Inicializa un grafo con el nombre correspondiente
+#geografico.cargar_grafo('Archivos_GV/Geografico de '+str(n3)+' nodos y distancia '+str(r)+'.gv') #Carga el grafo desde un archivo .gv
+#objeto=geografico.Fruchterman(WHITE,RED,BLUE,screen,clock,100,0.01,3000,80,20)
+
+# Grafo geográfico - 500 nodos
+#geografico=Grafo('Geografico de ' + str(n3) + ' nodos y distancia ' + str(r))  # Inicializa un grafo con el nombre correspondiente
+#geografico.cargar_grafo('Archivos_GV/Geografico de '+str(n3)+' nodos y distancia '+str(r)+'.gv') #Carga el grafo desde un archivo .gv
+#objeto=geografico.Barnes_hut(WHITE,RED,BLUE,screen,clock,1000,0.02,2000,7,15,10)
+
+# Grafo Barabasi-Albert - 100 nodos
+#barabasiAlbert=Grafo('BarabasiAlbert de ' + str(n2) + ' nodos de grado ' + str(d))  # Inicializa un grafo con el nombre correspondiente
+#barabasiAlbert.cargar_grafo('Archivos_GV/BarabasiAlbert de '+str(n2)+' nodos de grado '+str(d)+'.gv') #Carga el grafo desde un archivo .gv
+#objeto=barabasiAlbert.Fruchterman(WHITE,RED,BLUE,screen,clock,100,0.01,2000,10,200)
+##
+# Grafo Barabasi-Albert - 100 nodos
+#barabasiAlbert=Grafo('BarabasiAlbert de ' + str(n2) + ' nodos de grado ' + str(d))  # Inicializa un grafo con el nombre correspondiente
+#barabasiAlbert.cargar_grafo('Archivos_GV/BarabasiAlbert de '+str(n2)+' nodos de grado '+str(d)+'.gv') #Carga el grafo desde un archivo .gv
+#objeto=barabasiAlbert.Barnes_hut(WHITE,RED,BLUE,screen,clock,800,0.3,2000,.5,1,50)
+
+# Grafo Barabasi-Albert - 500 nodos
+#barabasiAlbert=Grafo('BarabasiAlbert de ' + str(n3) + ' nodos de grado ' + str(d))  # Inicializa un grafo con el nombre correspondiente
+#barabasiAlbert.cargar_grafo('Archivos_GV/BarabasiAlbert de '+str(n3)+' nodos de grado '+str(d)+'.gv') #Carga el grafo desde un archivo .gv
+#objeto=barabasiAlbert.Fruchterman(WHITE,RED,BLUE,screen,clock,100,0.1,1500,70,15)
+#
+# Grafo Barabasi-Albert - 500 nodos
+#barabasiAlbert=Grafo('BarabasiAlbert de ' + str(n3) + ' nodos de grado ' + str(d))  # Inicializa un grafo con el nombre correspondiente
+#barabasiAlbert.cargar_grafo('Archivos_GV/BarabasiAlbert de '+str(n3)+' nodos de grado '+str(d)+'.gv') #Carga el grafo desde un archivo .gv
+#objeto=barabasiAlbert.Barnes_hut(WHITE,RED,BLUE,screen,clock,100,0.2,2000,7,15,10)
+
+# Grafo Dorogovtsev-Mendes - 100 nodos
+#dorogovtsevMendes=Grafo('DorogovtsevMendes de ' + str(n2) + ' nodos')  # Inicializa un grafo con el nombre correspondiente
+#dorogovtsevMendes.cargar_grafo('Archivos_GV/DorogovtsevMendes de '+str(n2)+' nodos.gv') #Carga el grafo desde un archivo .gv
+#objeto=dorogovtsevMendes.Fruchterman(WHITE,RED,BLUE,screen,clock,100,0.01,1500,1,90)
+
+# Grafo Dorogovtsev-Mendes - 100 nodos
+#dorogovtsevMendes=Grafo('DorogovtsevMendes de ' + str(n2) + ' nodos')  # Inicializa un grafo con el nombre correspondiente
+#dorogovtsevMendes.cargar_grafo('Archivos_GV/DorogovtsevMendes de '+str(n2)+' nodos.gv') #Carga el grafo desde un archivo .gv
+#objeto=dorogovtsevMendes.Barnes_hut(WHITE,RED,BLUE,screen,clock,800,0.3,2000,.5,1,50)
+#
+## Grafo Dorogovtsev-Mendes - 500 nodos
+#dorogovtsevMendes=Grafo('DorogovtsevMendes de ' + str(n3) + ' nodos')  # Inicializa un grafo con el nombre correspondiente
+#dorogovtsevMendes.cargar_grafo('Archivos_GV/DorogovtsevMendes de '+str(n3)+' nodos.gv') #Carga el grafo desde un archivo .gv
+#objeto=dorogovtsevMendes.Fruchterman(WHITE,RED,BLUE,screen,clock,100,0.1,1500,50,20)
+
+# Grafo Dorogovtsev-Mendes - 500 nodos
+#dorogovtsevMendes=Grafo('DorogovtsevMendes de ' + str(n3) + ' nodos')  # Inicializa un grafo con el nombre correspondiente
+#dorogovtsevMendes.cargar_grafo('Archivos_GV/DorogovtsevMendes de '+str(n3)+' nodos.gv') #Carga el grafo desde un archivo .gv
+#objeto=dorogovtsevMendes.Barnes_hut(WHITE,RED,BLUE,screen,clock,100,0.3,2000,4,15,5)
+
